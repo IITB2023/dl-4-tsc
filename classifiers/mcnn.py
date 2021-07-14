@@ -12,8 +12,10 @@ class Classifier_MCNN:
     def __init__(self, output_directory, verbose, build=True):
         self.output_directory = output_directory
         self.verbose = verbose
-        self.pool_factors = [2,3,5] # used for hyperparameters grid search
-        self.filter_sizes = [0.05,0.1,0.2] # used for hyperparameters grid search 
+        #self.pool_factors = [2,3,5] # used for hyperparameters grid search
+        #self.filter_sizes = [0.05,0.1,0.2] # used for hyperparameters grid search 
+        self.pool_factors = [2]
+        self.filter_sizes = [0.05]
 
     def slice_data(self, data_x, data_y, slice_ratio): 
         n = data_x.shape[0]
